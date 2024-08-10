@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Heramb Tinder</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="dropdown_items">
+        <item>"Pune Vidyarthi Grah's College of Engineering"</item>
+        <item>"Pune Institute of Computer Technology"</item>
+        <item>"Vishvakarma Institute of technology"</item>
+        <item>College of Engineering Pune</item>
+    </string-array>
 </resources>
