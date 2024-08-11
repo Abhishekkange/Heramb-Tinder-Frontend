@@ -31,12 +31,13 @@ android {
 dependencies {
 
     implementation libs.appcompat
-    implementation 'com.google.android.material:material:1.10.0' // Update to the latest version
+    implementation 'com.google.android.material:material:1.10.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.fragment:fragment:1.6.1'
     implementation 'com.lorentzos.swipecards:library:1.0.9'
     implementation 'com.google.android.gms:play-services-auth:20.5.0'
-    implementation 'com.google.android.material:material:1.10.0'// Check for the latest version
+    implementation 'com.google.android.material:material:1.10.0'
+    implementation 'com.android.volley:volley:1.2.1'
     implementation libs.material
     implementation libs.activity
     implementation libs.constraintlayout

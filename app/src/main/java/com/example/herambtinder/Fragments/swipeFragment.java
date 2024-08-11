@@ -73,8 +73,6 @@ public class swipeFragment extends Fragment {
         profiles.add(new swipeProfile(R.drawable.siddhi, "Siddhi","23","I like Mumbai"));
 
 
-
-
         adapter = new swipeAdapter(profiles,getContext());
 
         CustomSwipeFlingAdapterView flingContainer = view.findViewById(R.id.swipeLayout);

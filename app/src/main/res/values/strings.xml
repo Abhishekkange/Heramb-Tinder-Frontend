@@ -8,4 +8,6 @@
         <item>"Vishvakarma Institute of technology"</item>
         <item>College of Engineering Pune</item>
     </string-array>
+    <string name="default_web_client_id">134114639858-4qso9a32kcjtirtt9bms1jisf065foa9.apps.googleusercontent.com</string>
+
 </resources>

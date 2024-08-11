@@ -1,7 +1,12 @@
 package com.example.herambtinder;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,11 +14,16 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.herambtinder.Fragments.birthdayFrag;
 import com.example.herambtinder.Fragments.selectUniversityFrag;
+import com.example.herambtinder.Fragments.selecturgender;
 
 public class setupProfileActivity extends AppCompatActivity {
 
     FrameLayout profileFrame;
+    ImageView nextBtn;
+    public static int frag_checker = 0;
+    @SuppressLint({"WrongViewCast", "MissingInflatedId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,10 +35,32 @@ public class setupProfileActivity extends AppCompatActivity {
             return insets;});
 
         profileFrame = findViewById(R.id.profileFrame);
-        selectUniversityFrag selectUniversityFrag = new selectUniversityFrag();
+        nextBtn = findViewById(R.id.settiingProfileNextBtn);
+        birthdayFrag birthfrag = new birthdayFrag();
+        selecturgender urGender = new selecturgender();
 
-        // Add the fragment to the 'fragment_container' FrameLayout
+
         getSupportFragmentManager().beginTransaction()
-                .add(R.id.profileFrame, selectUniversityFrag).commit();
+                .add(R.id.profileFrame, birthfrag).commit();
+
+        nextBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if(frag_checker ==0){
+
+                    frag_checker++;
+                    getSupportFragmentManager().beginTransaction()
+                            .add(R.id.profileFrame, urGender).commit();
+                }
+                else if(frag_checker ==1)
+                {
+                    Intent intent = new Intent(getApplicationContext(), UploadImageActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
+
+
     }
 }

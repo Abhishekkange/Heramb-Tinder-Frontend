@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -14,24 +15,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HerambTinder"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true"/>
         <activity
             android:name=".swipeActivity"
             android:exported="true" >
+
+        </activity>
+        <activity
+            android:name=".setupProfileActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".UploadImageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".setupProfileActivity"
-            android:exported="true"></activity>
-        <activity
-            android:name=".uploadImageActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Login"
-            android:exported="true">
 
         </activity>
         <activity
